@@ -20,3 +20,14 @@ down_from x = x : down_from (x-1)
 square_list [] = []
 square_list (x:xs) = x*x : square_list xs
 
+-- More complex methods of recursion
+
+take` 0 list = []
+take` n [] = []
+take` n (x:xs) = x : take` (n-1) xs
+-- Our version of take, which is a prelude function
+
+-- Our version of drop which is a prelude function
+drop` 0 list = list
+drop` n [] = []
+drop` n (x:xs) = drop` (n-1) xs
